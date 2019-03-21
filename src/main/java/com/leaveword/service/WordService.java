@@ -1,6 +1,6 @@
 package com.leaveword.service;
 
-import com.leaveword.Utils.Response;
+import com.leaveword.utils.Response;
 
 public interface WordService {
     Response getWords(Integer userId);

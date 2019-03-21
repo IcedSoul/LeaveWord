@@ -2,8 +2,8 @@ package com.leaveword.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-import com.leaveword.Utils.CommonTools;
-import com.leaveword.Utils.Response;
+import com.leaveword.utils.CommonTools;
+import com.leaveword.utils.Response;
 import com.leaveword.domain.Word;
 import com.leaveword.repository.UserRepository;
 import com.leaveword.repository.WordRepository;
@@ -24,15 +24,17 @@ public class WordServiceImpl implements WordService {
     @Override
     public Response getWords(Integer userId) {
         List<Word> words = wordRepository.findAll();
-        if(words.size()>0)
+        if(words.size()>0) {
             return new Response("0", JSONArray.toJSONString(words));
-        else
+        }
+        else {
             return new Response("0", "没有留言");
+        }
     }
 
     @Override
     public Response leaveWord(Integer userId, String title, String content) {
-        if(userRepository.findOne(userId) == null)
+        if(userRepository.findUserByUserId(userId) == null)
             return new Response("-1","用户不存在");
         if(CommonTools.isEmpty(title))
             return new Response("-1","标题不能为空");

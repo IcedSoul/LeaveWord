@@ -1,8 +1,8 @@
 package com.leaveword.service;
 
 import com.alibaba.fastjson.JSON;
-import com.leaveword.Utils.CommonTools;
-import com.leaveword.Utils.Response;
+import com.leaveword.utils.CommonTools;
+import com.leaveword.utils.Response;
 import com.leaveword.domain.User;
 import com.leaveword.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Response getUser(Integer userId) {
         User user = null;
-        if((user = userRepository.findOne(userId))!=null)
+        if((user = userRepository.findUserByUserId(userId))!=null)
             return new Response("0", JSON.toJSONString(user));
         else
             return new Response("-1","用户不存在");
