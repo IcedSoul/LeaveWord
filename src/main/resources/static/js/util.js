@@ -1,4 +1,4 @@
-var address = "http://localhost:8080/LeaveWord/";
+var address = window.location.origin + "/LeaveWord/";
 
 function setCookie(name, value, days) {
     var d = new Date;

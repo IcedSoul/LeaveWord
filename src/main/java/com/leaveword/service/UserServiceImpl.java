@@ -8,6 +8,8 @@ import com.leaveword.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -16,11 +18,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Response getUser(Integer userId) {
-        User user = null;
-        if((user = userRepository.findOne(userId))!=null)
-            return new Response("0", JSON.toJSONString(user));
-        else
-            return new Response("-1","用户不存在");
+        Optional<User> userOptional = userRepository.findById(userId);
+        return userOptional.map(user -> new Response("0", JSON.toJSONString(user))).orElseGet(() -> new Response("-1", "用户不存在"));
     }
 
     @Override

@@ -20,7 +20,7 @@ public class Word {
     private int userId;
     @Column(nullable = false, columnDefinition = "varchar(100) COMMENT '留言标题' default '未命名'")
     private String title;
-    @Column(nullable = false, columnDefinition = "varchar(20000) COMMENT '留言内容' default '没有内容'")
+    @Column(nullable = false, columnDefinition = "text COMMENT '留言内容'")
     private String content;
     @JSONField(format="yyyy-MM-dd HH:mm:ss")
     @Column(nullable = false, columnDefinition = "datetime COMMENT '留言时间'")
