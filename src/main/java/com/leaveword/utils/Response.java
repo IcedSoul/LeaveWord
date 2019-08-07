@@ -1,4 +1,4 @@
-package com.leaveword.Utils;
+package com.leaveword.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

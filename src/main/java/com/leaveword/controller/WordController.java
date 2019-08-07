@@ -1,6 +1,6 @@
 package com.leaveword.controller;
 
-import com.leaveword.Utils.Response;
+import com.leaveword.utils.Response;
 import com.leaveword.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

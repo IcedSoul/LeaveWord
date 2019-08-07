@@ -2,8 +2,8 @@ package com.leaveword.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-import com.leaveword.Utils.CommonTools;
-import com.leaveword.Utils.Response;
+import com.leaveword.utils.CommonTools;
+import com.leaveword.utils.Response;
 import com.leaveword.domain.Word;
 import com.leaveword.repository.UserRepository;
 import com.leaveword.repository.WordRepository;

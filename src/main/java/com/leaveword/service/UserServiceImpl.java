@@ -1,8 +1,8 @@
 package com.leaveword.service;
 
 import com.alibaba.fastjson.JSON;
-import com.leaveword.Utils.CommonTools;
-import com.leaveword.Utils.Response;
+import com.leaveword.utils.CommonTools;
+import com.leaveword.utils.Response;
 import com.leaveword.domain.User;
 import com.leaveword.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
