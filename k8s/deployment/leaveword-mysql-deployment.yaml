@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: leaveword-mysql
+spec:
+    replicas: 1
+    strategy:
+        type: Recreate
+    template:
+        metadata:
+            labels:
+                database: leaveword-mysql
+        spec:
+            containers:
+            - args:
+              - --character-set-server=utf8mb4
+              - --collation-server=utf8mb4_unicode_ci
+              env:
+              - name: MYSQL_DATABASE
+                value: leaveword
+              - name: MYSQL_ROOT_PASSWORD
+                value: root
+              image: mysql:5.6
+              name: leaveword-mysql
+              ports:
+              - containerPort: 3306
+

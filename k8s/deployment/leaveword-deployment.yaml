@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: leaveword
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: leaveword
+    spec:
+      containers:
+        - image: icedsoul/leaveword
+          name: leaveword
+          ports:
+            - containerPort: 8081
+      restartPolicy: Always
