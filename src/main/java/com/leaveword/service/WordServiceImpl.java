@@ -32,7 +32,7 @@ public class WordServiceImpl implements WordService {
 
     @Override
     public Response leaveWord(Integer userId, String title, String content) {
-        if(userRepository.findById(userId).isPresent())
+        if(!userRepository.findById(userId).isPresent())
             return new Response("-1","用户不存在");
         if(CommonTools.isEmpty(title))
             return new Response("-1","标题不能为空");
