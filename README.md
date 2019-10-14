@@ -1,48 +1,111 @@
-## 简介
-　　之前在刚开始学习JavaEE的时候写了一篇JSP+Servlet+JavaBean传统方式实现留言板的博客，在那篇博客中放了我跟着教材做的一个简单的留言板。一年多过去了，从刚开始学习servlet，到后来的Struts2，Spring，Hibernate，SpringMVC，到现在用的SpringBoot，也算是接触到了不少东西。昨天应一位同学的要求用SpringBoot重新做了一个简单的留言板项目，后端用的基本都是我现在学到的最新的知识，这次我会把做的流程简单说一下，希望能为大家的学习提供一些参考。
-## 准备
-　　开发工具：Intellij IDEA<br/>
-　　数据库：MySQL<br/>
-　　开发框架：SpringBoot<br/>
-## 开始
-### 创建项目
-　　创建项目时可以使用Intellij IDEA默认提供的新建方式，个人建议的新建方式有两种：一种是新建Maven Project，然后添加SpringBoot和一些必要依赖就好，这种方式可以百度Intellij  IDEA使用Maven创建JavaWeb项目，这里就不再多讲。<br/>
-　　另一种新建项目方式，如图：<br/>
-　　![](http://ou7jocypf.bkt.clouddn.com/17-8-25/99767335.jpg)
-　　
-　　然后填写基本的项目信息（图中只是示例，具体根据自己需要填写）：<br/>
-　　![](http://ou7jocypf.bkt.clouddn.com/17-8-25/96946608.jpg)
-　　
-　　填写基本信息之后需要勾选本项目所需要使用的组件：<br/>
-　　本项目使用了Lombok（省略实体get、set方法组件，IJ需装插件）<br/>
-　　JPA、MySQL等（此处未勾选也无所谓，可以之后再pom.xml中手动添加依赖）<br/>
-　　![](http://ou7jocypf.bkt.clouddn.com/17-8-25/75594869.jpg)
-　　
-　　之后填写路径和名字，新建项目的步骤就完成了。<br/>
-　　（新建之后如果IJ没有自动标记源码、资源、测试目录记得手动右键标记）<br/>
-　　（项目如果运行失败，请去掉pom.xml中如下依赖多的provide即可）
-　　
+## 项目简介
+本项目是一个非常简单的留言板项目，使用的开发框架为Spring Boot + JPA，数据库为MySQL，前端开发工具集为Bootstrap。  
+目前作为高级软件工程课程的CI/CD流水线期末项目的构建对象。  
 
+如果你做好了CI/CD工具调研，需要构建此项目，那么请按照如下过程运行和打包此项目。
+
+## 运行说明
+### 本地运行
+建议您先按照这里本地运行的步骤，在本地把这个项目启动起来，完成补充单元测试的工作。
+#### 创建数据库
+首先，在本地安装MySQL数据库或者使用远程MySQL数据库，然后新建名为***leaveword***的数据库，字符编码设置为***utf-8***:
+```shell
+# 进入数据库
+mysql -u root -p
+# 创建名为leaveword的数据库并且设置字符编码为utf-8
+create database leaveword default character set = 'utf8';
 ```
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-		</dependency>
+注意：数据库版本建议为5.6/5.7。
+
+#### 获取代码
+然后，把此项目代码clone至本地：
+```shell
+git clone https://github.com/IcedSoul/LeaveWord.git
+```
+#### 代码修改和运行
+接下来建议您使用Intellij IDEA或者类似工具打开和运行项目，当然，您也可以选择使用记事本等工具修改代码，然后按照下面说明在命令行编译运行项目。
+
+##### 使用IDEA
+如果你使用Intellij IDEA，首先需要安装一个名为lombok的插件，在File-setting-Plugins中搜索lombok，安装后重启IDEA即可。这个插件的功能是简化JavaBean代码，如果不安装可能IDE会编译错误。  
+
+然后修改项目LeaveWord/src/main/resources/application.yml文件：
+```yml
+server:
+  port: 8081
+  servlet:
+    context-path: /LeaveWord
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # 修改此处为你的mysql数据库
+    url: jdbc:mysql://localhost:3306/leaveword?characterEncoding=utf8&useSSL=false
+    username: root
+    # 修改数据库链接密码
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    prefix: classpath:/static/
+    suffix: .html
+    cache: false
 ```
 
-### 搭建后台
-　　新建项目成功之后，就可以搭建框架了，这里我只提一下基本的知识，不再具体提每个类怎么建立，每个东西是什么了，具体大家可以自行搜索、研究。<br/>
-　　这里使用的仍旧是MVC开发模式：<br/>
-　　domain文件下面对应数据库表，因为JPA可以自动创建实体，所以本项目无需使用SQL新建数据库，项目第一次运行时会自动根据实体创建表。（前提是建立数据库并且成功连接了数据库。）<br/>
-　　repository文件夹对应于传统的数据接口访问层，不过因为jpa的封装这里只需要继承接口，就可以有最基本的增删改查方法。此外特殊查询可以自定义，此处也不再详细讲。<br/>
-　　service文件夹对应具体的业务逻辑层，分为接口和实现，里面的方法都是controller需要调用的方法。<br/>
-　　controller对应控制层，提供接口，规定参数，调用Service对应方法。<br/>
-　　![](http://ou7jocypf.bkt.clouddn.com/17-8-25/50645877.jpg)
-　　
-　　此外，注意，SpringBoot也有配置文件，即resources下面的application.yml文件（默认是properties格式，两种皆可，格式不同），配置具体大家可以百度&Google，也可以自己修改试试就知道作用了。
-　　![](http://ou7jocypf.bkt.clouddn.com/17-8-25/6778879.jpg)
-### 搭建前端
-　　为了避免麻烦，我前端没用vue，而是使用了基本的HTML，使用了Bootstrap框架，前后端交互方式是ajax，具体也不必多讲，大家可以具体看代码。
-## 页面展示
-![](http://ou7jocypf.bkt.clouddn.com/17-8-25/16156120.jpg)
-![](http://ou7jocypf.bkt.clouddn.com/17-8-25/41027652.jpg)
+修改成功之后，运行LeaveWord/src/main/java/com/leaveword/DemoApplication.java即可启动项目。
+
+在浏览器访问http://localhost:8081/LeaveWord，访问项目主页面。
+
+##### 使用命令行
+首先，你仍需要修改LeaveWord/src/main/resources/application.yml中的数据库链接地址和密码。  
+如果没有安装Maven命令行工具，需要先安装Maven。
+然后运行以下命令来运行项目：
+```shell
+mvn clean package -DskipTests
+java -jar target/leaveword-0.0.1-SNAPSHOT.jar
+```
+
+### Docker容器运行
+
+如果您准备将此项目放到容器中运行，那么需要先安装Docker和Docker-Compose。
+
+同样，您需要先修改LeaveWord/src/main/resources/application.yml文件为以下内容：
+
+```yaml
+server:
+  port: 8081
+  servlet:
+    context-path: /LeaveWord
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://leaveword-mysql:3306/leaveword?characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    prefix: classpath:/static/
+    suffix: .html
+    cache: false
+```
+
+修改成功之后，运行以下命令：
+
+```shell
+# 注意，每次修改代码后都要运行以下代码重新构建镜像，否则修改不会生效。
+mvn clean package -DskipTests
+docker-compose build
+# 因为mysql第一次启动较慢，如果出现数据库链接失败情况属于正常现象，执行docker-compose down之后重新执行docker-compose up即可
+docker-compose up
+```
+
+此时，使用docker images查看，可以看到名为demo/leaveword的镜像，请自行根据调研的方案选择镜像上传方案。
+
+## 说明
+
+请注意：搭建CI/CD流程请基于Docker容器进行。
+
+以上内容为本项目的运行说明，请根据此说明结合所调研的CI/CD工具和解决方案实现整个CI/CD过程，如果在这个过程中对此项目本身有任何疑问请在此项目提issue或者在微信群提问。
