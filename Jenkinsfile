@@ -16,11 +16,13 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                echo 'Test Successful'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                echo 'Deployment Successful'
             }
         }
     }
