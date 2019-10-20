@@ -1,0 +1,10 @@
+spring:
+  profiles: prod
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://leaveword-mysql:3306/leaveword?characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+
+
