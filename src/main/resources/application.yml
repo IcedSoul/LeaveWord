@@ -3,6 +3,7 @@ server:
   servlet:
     context-path: /LeaveWord
 
+# 现在推荐新的方式Spring Boot Maven Plugin
 spring:
   profiles:
     active: @spring.active@
