@@ -24,8 +24,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'mvn clean package -P prod -DskipTests'
-                sh 'docker-compose build'
-                sh 'docker-compose up -d'
+
                 echo 'Deployment Successful'
             }
         }
