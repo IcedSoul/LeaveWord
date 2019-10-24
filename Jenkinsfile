@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            label 'docker'
+            image 'maven:3-alpine'
+        }
+    }
 
     tools {
         maven 'maven'
@@ -9,8 +14,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "mvn clean package -P test"
-                echo 'Build Successful'
+                sh "mvn package -P prod -DskipTests"
+                echo 'Package Successful'
+                sh "docker ps -a"
             }
         }
         stage('Test') {
