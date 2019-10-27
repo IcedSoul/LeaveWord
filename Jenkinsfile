@@ -11,7 +11,7 @@ pipeline {
                 echo 'Building..'
                 sh "mvn package -P prod -DskipTests"
                 echo 'Package Successful'
-                sh "docker build -t icedsoul/leaveword:latest"
+                sh "docker build -t icedsoul/leaveword:latest ."
                 sh "docker push icedsoul/leaveword:latest"
             }
         }
