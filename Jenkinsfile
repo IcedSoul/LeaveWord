@@ -47,7 +47,24 @@ pipeline {
         always {
             pmd(canRunOnFailed: true, pattern: '**/target/pmd.xml')
             junit testResults: "**/target/surefire-reports/*.xml"
-
+        }
+        success {
+            emailext (
+                subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                    <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
+                to: "1443700905@qq.com",
+                from: "guoxiaofeng_2015@163.com"
+            )
+        }
+        failure {
+            emailext (
+                subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                    <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
+                to: "1443700905@qq.com",
+                from: "guoxiaofeng_2015@163.com"
+            )
         }
     }
 }
