@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "mvn package -P prod -DskipTests"
+                sh "mvn package -P dev -DskipTests"
                 echo 'Package Successful'
                 sh "docker build -t icedsoul/leaveword:latest ."
                 sh "docker push icedsoul/leaveword:latest"
