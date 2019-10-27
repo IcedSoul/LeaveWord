@@ -23,8 +23,8 @@ pipeline {
                         classPattern: 'target/classes',
                         sourcePattern: 'src/main/java',
                         changeBuildStatus: true,
-                        minimumMethodCoverage:'1',maximumMethodCoverage:'20',
-                        minimumClassCoverage:'1',maximumClassCoverage:'20'
+                        minimumMethodCoverage:'1',maximumMethodCoverage:'70',
+                        minimumClassCoverage:'1',maximumClassCoverage:'70'
                         )
                 echo 'Test Successful'
             }
