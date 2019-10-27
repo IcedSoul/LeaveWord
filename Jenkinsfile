@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "mvn package -P dev -DskipTests"
+                sh "mvn package -P test -DskipTests"
                 echo 'Package Successful'
                 sh "docker build -t icedsoul/leaveword:latest ."
                 sh "docker push icedsoul/leaveword:latest"
@@ -19,6 +19,16 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'mvn test -P test'
+                sh 'echo "P3C-PMD"'
+                sh "mvn pmd:pmd -P test"
+                jacoco(
+                        execPattern: 'target/jacoco.exec',
+                        classPattern: 'target/classes',
+                        sourcePattern: 'src/main/java',
+                        changeBuildStatus: true,
+                        minimumMethodCoverage:'30',maximumMethodCoverage:'70',
+                        minimumClassCoverage:'30',maximumClassCoverage:'70'
+                        )
                 echo 'Test Successful'
             }
         }
@@ -30,6 +40,14 @@ pipeline {
                 sh 'docker run -p 8081:8081 --name="leaveword" --restart always -d icedsoul/leaveword'
                 echo 'Deployment Successful'
             }
+        }
+    }
+
+    post {
+        always {
+            pmd(canRunOnFailed: true, pattern: '**/target/pmd.xml')
+            junit testResults: "**/target/surefire-reports/*.xml"
+
         }
     }
 }
