@@ -12,7 +12,7 @@ pipeline {
                 sh "mvn package -P test -DskipTests"
                 echo 'Package Successful'
                 sh "docker build -t icedsoul/leaveword:latest ."
-                sh "docker push icedsoul/leaveword:latest"
+
             }
         }
         stage('Test') {
