@@ -18,6 +18,8 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'mvn test -P test'
+                sh 'echo "P3C-PMD"'
+                sh "mvn pmd:pmd -P test"
                 jacoco(
                         execPattern: 'target/jacoco.exec',
                         classPattern: 'target/classes',
