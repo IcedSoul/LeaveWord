@@ -9,6 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.sql.Timestamp;
 
+/**
+ * @author guoxiaofeng
+ */
 @Data
 @Entity
 public class Word {

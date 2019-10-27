@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+/**
+ * @author guoxiaofeng
+ */
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -24,13 +27,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Response userRegister(String userName, String userPassword) {
-        if(CommonTools.isEmpty(userName))
+        if(CommonTools.isEmpty(userName)) {
             return new Response("-1","用户名不能为空");
-        if(CommonTools.isEmpty(userPassword))
+        }
+        if(CommonTools.isEmpty(userPassword)) {
             return new Response("-1","用户密码不能为空");
+        }
         try {
-            if(userRepository.findByUserName(userName)!=null)
+            if(userRepository.findByUserName(userName)!=null) {
                 return new Response("-1","此用户名已经存在");
+            }
             User user = new User();
             user.setUserName(userName);
             user.setUserPassword(userPassword);
@@ -45,21 +51,25 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Response userLogin(String userName, String userPassword) {
-        if(CommonTools.isEmpty(userName))
+        if(CommonTools.isEmpty(userName)) {
             return new Response("-1","用户名不能为空");
-        if(CommonTools.isEmpty(userPassword))
+        }
+        if(CommonTools.isEmpty(userPassword)) {
             return new Response("-1","用户密码不能为空");
+        }
         User user = userRepository.findByUserName(userName);
         if(user != null){
             if(user.getUserPassword().equals(userPassword)) {
                 user.setUserPassword("");
                 return new Response("0", JSON.toJSONString(user));
             }
-            else
+            else {
                 return new Response("-1","密码错误");
+            }
         }
-        else
+        else {
             return new Response("-1","用户不存在");
+        }
     }
 
 }

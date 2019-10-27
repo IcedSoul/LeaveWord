@@ -2,15 +2,16 @@ package com.leaveword.utils;
 
 import java.sql.Timestamp;
 
+
+/**
+ * @author guoxiaofeng
+ */
 public class CommonTools {
     public static boolean isEmpty(String str){
-        if(str == null)
+        if(str == null) {
             return true;
-        if(str.isEmpty())
-            return true;
-        if(str == "" || str.equals(""))
-            return true;
-        return false;
+        }
+        return str.isEmpty();
     }
 
     public static Timestamp getCurrentTime(){
