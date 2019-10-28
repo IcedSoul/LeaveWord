@@ -44,9 +44,10 @@ pipeline {
 
     post {
         always {
+            pmd(canRunOnFailed: true, pattern: '**/target/pmd.xml')
             step([$class: 'Mailer',
                         notifyEveryUnstableBuild: true,
-                        recipients: "1443700905@qq.com",
+                        recipients: "1989153584@qq.com",
                         sendToIndividuals: true])
         }
     }
