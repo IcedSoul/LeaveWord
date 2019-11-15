@@ -1,20 +1,20 @@
 
-Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-84sk5[0m
-{"level":"warn","ts":1573558663.3631601,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1573558663.3644297,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jl567[0m
+{"level":"warn","ts":1573798327.514698,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573798327.5161498,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-sddkw[0m
-{"level":"warn","ts":1573558669.5713348,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1573558669.573818,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xq5gh[0m
+{"level":"warn","ts":1573798329.1727173,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1573798329.1752477,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 
 Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-icedsoul-leaveword-master-9s78g[0m
-{"level":"warn","ts":1573558703.215808,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1573558711.33076,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/LeaveWord.git @ v0.0.1 in path /workspace/source"}
+Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-icedsoul-leaveword-master-9wl7c[0m
+{"level":"warn","ts":1573798339.2373698,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573798344.1582227,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/LeaveWord.git @ v0.0.2 in path /workspace/source"}
 
 Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:5dc39b5ffa629fd263cd2074924998de7fcd0af5
+Using SHAs from PULL_REFS=master:412e6ff3a76f2e69b108ae302945613c61d416e1
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
 Showing logs for build [32micedsoul-leaveword-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
@@ -26,7 +26,7 @@ OpenJDK 64-Bit Server VM warning: If the number of processors is expected to inc
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] -----------------------< cn.icedsoul:leaveword >------------------------
-[INFO] Building LeaveWord 0.0.1
+[INFO] Building LeaveWord 0.0.2
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ leaveword ---
@@ -54,31 +54,31 @@ OpenJDK 64-Bit Server VM warning: If the number of processors is expected to inc
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.leaveword.DemoApplicationTests
-11:40:36.162 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.leaveword.DemoApplicationTests]
-11:40:36.168 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-11:40:36.174 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-11:40:36.196 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.leaveword.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-11:40:36.207 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.leaveword.DemoApplicationTests], using SpringBootContextLoader
-11:40:36.211 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.leaveword.DemoApplicationTests]: class path resource [com/leaveword/DemoApplicationTests-context.xml] does not exist
-11:40:36.212 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.leaveword.DemoApplicationTests]: class path resource [com/leaveword/DemoApplicationTestsContext.groovy] does not exist
-11:40:36.212 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.leaveword.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-11:40:36.212 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.leaveword.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:40:36.248 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.leaveword.DemoApplicationTests]
-11:40:36.320 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/leaveword/DemoApplication.class]
-11:40:36.321 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.leaveword.DemoApplication for test class com.leaveword.DemoApplicationTests
-11:40:36.421 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.leaveword.DemoApplicationTests]: using defaults.
-11:40:36.422 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-11:40:36.438 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@61862a7f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@441772e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7334aada, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1d9b7cce, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4d9e68d0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@42e99e4a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14dd9eb7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52e6fdee, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6c80d78a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@62150f9e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a451d4d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7fa98a66]
-11:40:36.439 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
-11:40:36.440 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
-11:40:36.441 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
-11:40:36.441 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
-11:40:36.441 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
-11:40:36.441 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
-11:40:36.446 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4cc451f2 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6379eb testClass = DemoApplicationTests, locations = '**', classes = '{class com.leaveword.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '**', propertySourceLocations = '**', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ee52dcd, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@57e1b0c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3dfc5fb8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@58c1670b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
-11:40:36.446 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
-11:40:36.447 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
-11:40:36.465 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+06:14:25.630 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.leaveword.DemoApplicationTests]
+06:14:25.636 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+06:14:25.643 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+06:14:25.733 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.leaveword.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+06:14:25.744 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.leaveword.DemoApplicationTests], using SpringBootContextLoader
+06:14:25.748 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.leaveword.DemoApplicationTests]: class path resource [com/leaveword/DemoApplicationTests-context.xml] does not exist
+06:14:25.749 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.leaveword.DemoApplicationTests]: class path resource [com/leaveword/DemoApplicationTestsContext.groovy] does not exist
+06:14:25.749 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.leaveword.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+06:14:25.749 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.leaveword.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+06:14:25.853 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.leaveword.DemoApplicationTests]
+06:14:26.033 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/leaveword/DemoApplication.class]
+06:14:26.034 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.leaveword.DemoApplication for test class com.leaveword.DemoApplicationTests
+06:14:26.246 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.leaveword.DemoApplicationTests]: using defaults.
+06:14:26.247 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+06:14:26.324 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@61862a7f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@441772e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7334aada, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1d9b7cce, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4d9e68d0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@42e99e4a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14dd9eb7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52e6fdee, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6c80d78a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@62150f9e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a451d4d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7fa98a66]
+06:14:26.325 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
+06:14:26.326 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
+06:14:26.327 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
+06:14:26.327 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
+06:14:26.328 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
+06:14:26.328 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
+06:14:26.334 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4cc451f2 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6379eb testClass = DemoApplicationTests, locations = '**', classes = '{class com.leaveword.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '**', propertySourceLocations = '**', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ee52dcd, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@57e1b0c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3dfc5fb8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@58c1670b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+06:14:26.335 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.leaveword.DemoApplicationTests]
+06:14:26.335 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.leaveword.DemoApplicationTests]
+06:14:26.432 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -88,13 +88,13 @@ OpenJDK 64-Bit Server VM warning: If the number of processors is expected to inc
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-11-12 11:40:36.858  INFO 68 --- [           main] com.leaveword.DemoApplicationTests       : Starting DemoApplicationTests on icedsoul-leaveword-master-1-from-build-pack-8qcg6-pod-eeeb79 with PID 68 (started by root in /workspace/source)
-2019-11-12 11:40:36.860  INFO 68 --- [           main] com.leaveword.DemoApplicationTests       : No active profile set, falling back to default profiles: default
-2019-11-12 11:40:37.807  INFO 68 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-11-12 11:40:37.886  INFO 68 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 2 repository interfaces.
-2019-11-12 11:40:38.353  INFO 68 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7763675f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-12 11:40:38.703  INFO 68 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-11-12 11:40:40.136 ERROR 68 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+2019-11-15 06:14:27.529  INFO 67 --- [           main] com.leaveword.DemoApplicationTests       : Starting DemoApplicationTests on icedsoul-leaveword-master-1-from-build-pack-znzkt-pod-e3b5a4 with PID 67 (started by root in /workspace/source)
+2019-11-15 06:14:27.531  INFO 67 --- [           main] com.leaveword.DemoApplicationTests       : No active profile set, falling back to default profiles: default
+2019-11-15 06:14:30.247  INFO 67 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-15 06:14:30.441  INFO 67 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187ms. Found 2 repository interfaces.
+2019-11-15 06:14:31.638  INFO 67 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$572a4fb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-15 06:14:32.455  INFO 67 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-15 06:14:33.687 ERROR 67 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -120,11 +120,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$963a29ce.CGLIB$jpaVendorAdapter$4(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$963a29ce$$FastClassBySpringCGLIB$$24883f83.invoke(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7601121f.CGLIB$jpaVendorAdapter$4(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7601121f$$FastClassBySpringCGLIB$$4d025f05.invoke(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$963a29ce.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7601121f.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
@@ -231,7 +231,7 @@ Caused by: java.net.UnknownHostException: leaveword-mysql: Name or service not k
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.15.jar:8.0.15]
 	... 105 common frames omitted
 
-2019-11-12 11:40:40.146  WARN 68 --- [           main] o.s.b.a.orm.jpa.DatabaseLookup           : Unable to determine jdbc url from datasource
+2019-11-15 06:14:33.691  WARN 67 --- [           main] o.s.b.a.orm.jpa.DatabaseLookup           : Unable to determine jdbc url from datasource
 
 org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -241,11 +241,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73) ~[spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$963a29ce.CGLIB$jpaVendorAdapter$4(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$963a29ce$$FastClassBySpringCGLIB$$24883f83.invoke(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7601121f.CGLIB$jpaVendorAdapter$4(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7601121f$$FastClassBySpringCGLIB$$4d025f05.invoke(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$963a29ce.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7601121f.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.1.3.RELEASE.jar:2.1.3.RELEASE]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
@@ -378,14 +378,14 @@ Caused by: java.net.UnknownHostException: leaveword-mysql: Name or service not k
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.15.jar:8.0.15]
 	... 105 common frames omitted
 
-2019-11-12 11:40:40.212  INFO 68 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-11-15 06:14:33.940  INFO 67 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-11-12 11:40:40.295  INFO 68 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
-2019-11-12 11:40:40.296  INFO 68 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-11-12 11:40:40.454  INFO 68 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-11-12 11:40:40.704  INFO 68 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-11-12 11:40:41.707 ERROR 68 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+2019-11-15 06:14:34.148  INFO 67 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-11-15 06:14:34.149  INFO 67 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-15 06:14:34.642  INFO 67 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-15 06:14:35.240  INFO 67 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-15 06:14:36.243 ERROR 67 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -492,14 +492,14 @@ Caused by: java.net.UnknownHostException: leaveword-mysql
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.15.jar:8.0.15]
 	... 78 common frames omitted
 
-2019-11-12 11:40:41.716  WARN 68 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Communications link failure
+2019-11-15 06:14:36.244  WARN 67 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2019-11-12 11:40:41.719  WARN 68 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2019-11-12 11:40:41.731  INFO 68 --- [           main] ConditionEvaluationReportLoggingListener : 
+2019-11-15 06:14:36.247  WARN 67 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2019-11-15 06:14:36.255  INFO 67 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-11-12 11:40:41.734 ERROR 68 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2019-11-15 06:14:36.258 ERROR 67 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
@@ -574,7 +574,7 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
 	... 59 common frames omitted
 
-2019-11-12 11:40:41.737 ERROR 68 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@61862a7f] to prepare test instance [com.leaveword.DemoApplicationTests@14a049f9]
+2019-11-15 06:14:36.260 ERROR 67 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@61862a7f] to prepare test instance [com.leaveword.DemoApplicationTests@2bc426f0]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
@@ -652,7 +652,7 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
 	... 59 common frames omitted
 
-[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.798 s <<< FAILURE! - in com.leaveword.DemoApplicationTests
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.144 s <<< FAILURE! - in com.leaveword.DemoApplicationTests
 [ERROR] contextLoads(com.leaveword.DemoApplicationTests)  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
@@ -670,8 +670,8 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  02:06 min
-[INFO] Finished at: 2019-11-12T11:40:42Z
+[INFO] Total time:  02:07 min
+[INFO] Finished at: 2019-11-15T06:14:36Z
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M1:test (default-test) on project leaveword: There are test failures.
 [ERROR] 
